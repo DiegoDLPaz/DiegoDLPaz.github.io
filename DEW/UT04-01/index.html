@@ -1,20 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=inp, initial-scale=1.0"
-</head>
-<body>
-  <form action="https://www.w3schools.com/action_page.php">
-    <input type="tel" name="Telefono">  
-    <input type="password" name="pass">
-    <input type="email" name="email">
-    <input type="number" name="numero">
-    <input type="text" name="Texto">
-    <input type="url" name="Url">
-    <input type="submit" value="Enviar a w3school a ver que me dice">
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body style="width: 100%; display: flex; justify-content: center">
+    <form
+      action="https://www.w3schools.com/action_page.php"
+      method="POST"
+      style="padding: 1em; border: 2px dotted black; width: 45em"
+    >
+      <h1 style="padding: 0; margin: 0">Datos Usuario</h1>
+      <hr />
+      <div
+        class="user_section"
+        style="
+          width: 30%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1em;
+        "
+      >
+        <article>
+          <label for="name"> Nombre de usuario </label><br />
+          <input
+            type="text"
+            id="name"
+            placeholder="UserName"
+            style="width: 18em"
+          />
+        </article>
+        <article>
+          <label for="pass"> Contraseña </label><br />
+          <input
+            type="password"
+            id="pass"
+            placeholder="Introduce Contraseña"
+            style="width: 18em"
+          />
+          <br />
+          <br />
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox">Mostrar Contraseña</label>
+        </article>
+      </div>
+      <h1 style="padding: 0; margin: 1em 0 0 0">Datos Personales</h1>
+      <hr />
+      <div
+        class="personal_section"
+        style="
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1em;
+        "
+      >
+        <article>
+          <label for="nombre"> Nombre </label><br />
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre"
+            style="width: 23em"
+          />
+        </article>
+        <article>
+          <label for="apellidos"> Apellidos </label><br />
+          <input
+            type="text"
+            id="apellidos"
+            placeholder="Apellidos"
+            style="width: 23em"
+          />
+        </article>
+        <article>
+          <label for="phone"> Teléfono </label><br />
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Ejem: (+34)922123123"
+            style="width: 23em"
+          />
+        </article>
+        <article>
+            <label for="postal"> Código Postal </label><br />
+            <input
+              type="number"
+              id="postal"
+              placeholder="38XXX"
+              style="width: 23em"
+            />
+          </article>
+      </div>
+      <div class="personal-down-section" style="
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1em;
+      margin: 1em 0 0 0;
+      align-items: center;
+    ">
+        
+          <article>
+            <label for="selector"> DNI/NIE </label><br />
+            <select id="selector">
+              <option value="default">...</option>
+              <option value="dni">Dni</option>
+              <option value="nie">NIE</option>
+            </select>
+            <input type="text" placeholder="DNI/NIE" />
+          </article>
   
-  
-</body>
+          <article>
+            <label for="create"> Crear cuenta como </label><br />
+            <label>
+              <input type="radio" id="option1" name="create" value="particular" />
+              Particular
+            </label>
+            <label>
+              <input type="radio" id="option2" name="create" value="empresa" />
+              Empresa
+            </label>
+          </article>
+          <article>
+            <label for="birth-year">Año de nacimiento:</label>
+            <select id="birth-year" name="birthYear">
+              <option value="2005">2010</option>
+              <option value="2004">2011</option>
+              <option value="2003">2012</option>
+              <option value="2002">2013</option>
+            </select>
+          </article>
+      </div>
+      <div class="personal-foot-section">
+        <article style="margin: 1em 0 0 0;">
+            <label for="aficiones">Elige tus aficiones:</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+                <label for="musica" style="margin: 0.5em 0 0.5em 0;">
+                    <input type="checkbox" name="musica" id="musica">
+                    Música
+                </label>
+                <label for="deporte" style="margin: 0.5em 0 0.5em 0;">
+                    <input type="checkbox" name="deporte" id="deporte">
+                    Deporte
+                </label>
+                <label for="juegos" style="margin: 0.5em 0 0.5em 0;">
+                    <input type="checkbox" name="juegos" id="juegos">
+                    Video juegos
+                </label>
+                <label for="manualidades" style="margin: 0.5em 0 0.5em 0;">
+                    <input type="checkbox" name="manualidades" id="manualidades">
+                    Manualidades
+                </label>
+                <label for="artes" style="margin: 0.5em 0 0.5em 0;">
+                    <input type="checkbox" name="artes" id="artes">
+                    Artes
+                </label>
+                <label for="lectura" style="margin: 0.5em 0 0.5em 0;">
+                    <input type="checkbox" name="lectura" id="lectura">
+                    Lectura
+                </label>
+            </div>
+          </article>
+      </div>
+      <h1 style="padding: 0; margin: 1.5em 0 0 0">Datos Publicación</h1>
+      <hr />
+      <div style="display: grid; width: 100%;">
+        <article>
+            <label for="titulo">
+                Titulo
+            </label><br>
+            <input type="text" id="titulo" name="titulo" placeholder="Titulo" style="width: 100%;">
+        </article>
+        <br>
+        <article>
+            <label for="desc">
+                Descripción
+            </label><br>
+            <textarea name="desc" id="desc" style="width: 100%; height: 4em;"></textarea>
+        </article>
+      </div>
+      <div style="text-align: center; margin-top: 1em;">
+        <button type="submit" style="padding: 10px 20px;">Mandar formulario</button>
+      </div>
+      
+    </form>
+  </body>
 </html>
