@@ -1,0 +1,222 @@
+novalidate<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div>
+      <form
+      id="frm"
+      action="https://www.w3schools.com/action_page.php"
+      method="POST"
+      novalidate
+    >
+      <h1>Datos Usuario</h1>
+      <hr />
+      <div class="user_section">
+        <div>
+          <label for="NombreUsuario"> Nombre de usuario </label><br />
+          <input
+            type="text"
+            id="NombreUsuario"
+            name="NombreUsuario"
+            placeholder="UserName"
+            minlength="4"
+            maxlength="20"
+            required
+          />
+          <small id="NombreUsuarioError" class="error-message"></small>
+        </div>
+        <div>
+          <label for="Contrasena"> Contraseña </label><br />
+          <input
+            type="password"
+            id="Contrasena"
+            name="Contrasena"
+            placeholder="Introduce Contraseña"
+            pattern="^\d{8}$"
+            required
+          />
+
+          <small id="ContrasenaError" class="error-message"></small>
+          <div class="show">
+            <label for="passCheckbox">Mostrar Contraseña</label>
+            <input type="checkbox" id="passCheckbox" class="passCheckbox"/>
+          </div>
+        </div>
+      </div>
+      <h1>Datos Personales</h1>
+      <hr />
+      <div class="personal_section">
+        <div>
+          <label for="Nombre"> Nombre </label><br />
+          <input type="text" id="Nombre" name="Nombre" placeholder="Nombre" minlength="4" maxlength="20" required />
+          <small id="NombreError" class="error-message"></small>
+        </div>
+        <div>
+          <label for="Apellidos"> Apellidos </label><br />
+          <input type="text" id="Apellidos" name="Apellidos" placeholder="Apellidos" minlength="4" maxlength="20" required />
+          <small id="ApellidosError" class="error-message"></small>
+        </div>
+        <div>
+          <label for="Telefono"> Teléfono </label><br />
+          <input
+            type="tel"
+            id="Telefono"
+            name="Telefono"
+            placeholder="Ejem: (+34)922123123"
+            pattern="^\(\+34\)\d{9}$"
+            required
+          />
+          <small id="TelefonoError" class="error-message"></small>
+        </div>
+        <div>
+          <label for="CodigoPostal"> Código Postal </label><br />
+          <input type="text" id="CodigoPostal" name="CodigoPostal" placeholder="38XXX" pattern="^38\d{3}$" required />
+          <small id="CodigoPostalError" class="error-message"></small>
+        </div>
+      </div>
+      <div class="personal-down-section">
+        <div>
+          <label for="TipoDocumento"> DNI/NIE </label><br />
+          <select id="TipoDocumento">
+            <option value="default">...</option>
+            <option value="dni">Dni</option>
+            <option value="nie">NIE</option>
+          </select>
+          <input
+            type="text"
+            id="DniNie"
+            name="DniNie"
+            placeholder="DNI/NIE"
+            pattern="/[0-9]{8}[A-Z]{1}$/"
+            required
+            disabled
+          />
+          <small id="DniNieError" class="error-message"></small>
+        </div>
+
+        <div>
+          <label for="CuentaComo"> Crear cuenta como </label><br />
+          <label>
+            <input
+              type="radio"
+              id="option1"
+              name="CuentaComo"
+              value="particular"
+            />
+            Particular
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="option2"
+              name="CuentaComo"
+              value="empresa"
+            />
+            Empresa
+          </label>
+        </div>
+
+        <div>
+          <label for="AnioNacimiento">Año de nacimiento:</label>
+          <select id="AnioNacimiento" name="birthYear" class="birth">
+
+          </select>
+        </div>
+      </div>
+      <div class="personal-foot-section">
+        <div>
+          <input type="text" name="aficiones" id="hiddenHobbies" class="hidden-text">
+          <label for="aficiones">Elige tus aficiones:</label>
+          <small id="aficionesError" class="error-message"></small>
+          <div class="hobbies">
+            <label for="musica">
+              <input type="checkbox" id="musica" value="MU" />
+              Música
+            </label>
+            <label for="deporte">
+              <input type="checkbox" id="deporte" value="DE" />
+              Deporte
+            </label>
+            <label for="juegos">
+              <input type="checkbox" id="juegos" value="VI" />
+              Video juegos
+            </label>
+            <label for="manualidades">
+              <input
+                type="checkbox"
+                
+                id="manualidades"
+                value="MA"
+              />
+              Manualidades
+            </label>
+            <label for="artes">
+              <input type="checkbox" id="artes" value="AR" />
+              Artes
+            </label>
+            <label for="lectura">
+              <input type="checkbox" id="lectura" value="LE" />
+              Lectura
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="publish-section">
+        <h1>Datos Publicación</h1>
+        <hr />
+        <div class="titulo">
+          <div>
+            <label for="PublicaciónTitulo"> Titulo </label><br />
+            <input
+              type="text"
+              id="PublicaciónTitulo"
+              name="PublicaciónTitulo"
+              placeholder="Titulo"
+              maxlength="15"
+              minlength="4"
+              required
+            />
+            <p id="count">0/15</p>
+            <small id="PublicaciónTituloError" class="error-message"></small>
+
+          </div>
+          <br />
+          <div>
+            <label for="PublicacionDescripcion"> Descripción </label><br />
+            <textarea
+              name="PublicacionDescripcion"
+              id="PublicacionDescripcion"
+              maxlength="120"
+              minlength="4"
+              required
+            ></textarea>
+            <p id="descCount">0/200</p>
+            <small id="PublicacionDescripcionError" class="error-message"></small>
+
+          </div>
+        </div>
+        <div class="submit">
+          <button type="submit" id="submit">Mandar formulario</button>
+        </div>
+      </div>
+    </form>
+    </div>
+    <div>
+      <p id="errorNombreUsuario"></p>
+      <p id="errorContrasena"></p>
+      <p id="errorNombre"></p>
+      <p id="errorApellidos"></p>
+      <p id="errorDniNie"></p>
+      <p id="errorTelefono"></p>
+      <p id="errorPublicaciónTitulo"></p>
+      <p id="errorPublicacionDescripcion"></p>
+    </div>
+    
+  </body>
+  <script type="module" src="./js/script.js"></script>
+</html>
